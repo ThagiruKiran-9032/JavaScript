@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Practice Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Practice</h1>
+    </header>
+    <nav>
+        <a href="#id">getElementById</a>
+        <a href="#class">getElementsByClassName</a>
+        <a href="#qs">querySelector</a>
+        <a href="#qsa">querySelectorAll</a>
+        <a href="#text">innerText</a>
+        <a href="#html">innerHTML</a>
+        <a href="#style">Styles</a>
+        <a href="#attribute">Attributes</a>
+        <a href="#create">Create Element</a>
+        <a href="#append">appendChild</a>
+        <a href="#remove">remove()</a>
+        <a href="#click">Click</a>
+        <a href="#keyup">Keyup</a>
+        <a href="#submit">Submit</a>
+        <a href="#hover">Mouse Events</a>
+        <a href="#traversal">Traversal</a>
+        <a href="#siblings">Siblings</a>
+    </nav>
+    <main>
+        <section class="card" id="id">
+            <h2>1. getElementById()</h2>
+            <p id="welcomeText">Welcome Guest</p>
+            <button onclick="changeWelcome()">Change Text</button>
+        </section>
+        <section class="card" id="class">
+            <h2>2. getElementsByClassName()</h2>
+            <p class="price">$120</p>
+            <p class="price">$250</p>
+            <p class="price">$400</p>
+            <button onclick="changePriceColor()">Change Price Color</button>
+        </section>
+        <section class="card" id="qs">
+            <h2>3. querySelector()</h2>
+            <div class="note">First Notification</div>
+            <div class="note">Second Notification</div>
+            <button onclick="highlightFirstNote()">Highlight First</button>
+        </section>
+        <section class="card" id="qsa">
+            <h2>4. querySelectorAll()</h2>
+            <ul id="menu">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+            <button onclick="increaseMenuSize()">Increase Font Size</button>
+        </section>
+        <section class="card" id="text">
+            <h2>5. innerText</h2>
+            <h3 id="timeText">Click Button</h3>
+            <button onclick="showTime()">Show Current Time</button>
+        </section>
+        <section class="card" id="html">
+            <h2>6. innerHTML</h2>
+            <div id="studentCard"></div>
+            <button onclick="createStudentCard()">Create Student Card</button>
+        </section>
+        <section class="card" id="style">
+            <h2>7. Changing Styles</h2>
+            <div id="styleBox">Style Me</div>
+            <button onclick="styleBox()">Apply Styles</button>
+        </section>
+        <section class="card" id="attribute">
+            <h2>8. Attributes</h2>
+            <br>
+            <img id="profileImage" src="https://via.placeholder.com/150" width="150" alt="Profile">
+            <br><br>
+            <button onclick="changeImage()">Change Image</button>
+        </section>
+        <section class="card" id="create">
+            <h2>9. createElement()</h2>
+            <div id="reviewBox">How am I?</div>
+            <button onclick="createReview()">Create Review</button>
+        </section>
+        <section class="card" id="append">
+            <h2>10. appendChild()</h2>
+            <div id="chatBox"></div>
+            <button onclick="addMessage()">Add Message</button>
+        </section>
+        <section class="card" id="remove">
+            <h2>11. remove()</h2>
+            <div id="offerBanner">Flat 50% OFF Today</div>
+            <button onclick="removeBanner()">Close Banner</button>
+        </section>
+        <section class="card" id="click">
+            <h2>12. Click Event</h2>
+            <h3 id="likeCount">Likes : 0</h3>
+            <button onclick="increaseLikes()">Like</button>
+        </section>
+        <section class="card" id="keyup">
+            <h2>13. Keyup Event</h2>
+            <br>
+            <input type="text" id="username" placeholder="Type your name" onkeyup="countCharacters()">
+            <p id="characterCount">Characters : 0</p>
+        </section>
+        <section class="card" id="submit">
+            <h2>14. Submit Event</h2>
+            <form onsubmit="registerUser(event)">
+                <input type="text" id="studentName" placeholder="Enter Name">
+                <button type="submit">Register</button>
+            </form>
+            <p id="registrationMessage"></p>
+        </section>
+        <section class="card" id="hover">
+            <h2>15 & 16. Mouse Events</h2>
+            <div id="productCard" onmouseover="mouseEnter()" onmouseout="mouseLeave()">
+                Hover Over Me
+            </div>
+        </section>
+        <section class="card" id="traversal">
+            <h2>17. DOM Traversal</h2>
+            <div id="parentBox">
+                <p id="childText">Child Paragraph</p>
+            </div>
+            <button onclick="changeParent()">Change Parent </button>
+        </section>
+        <section class="card" id="siblings">
+            <h2>18. Sibling Navigation</h2>
+            <h3>HTML</h3>
+            <h3 id="currentLanguage">JavaScript</h3>
+            <h3>React</h3>
+            <button onclick="highlightSiblings()"> Highlight Siblings </button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
