@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <form id="weatherForm" class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name" pattern="[^0-9]*" title="Invalid input" required>
+            <button type="submit" id="weatherBtn">Get Weather</button>
+        </form>
+
+        <div id="weatherResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
